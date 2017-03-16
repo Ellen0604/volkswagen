@@ -1,0 +1,476 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body,#mask,#wrap{
+	width: 100%;
+	min-width: 1024px;
+	height: 100%;
+	font-family: "微软雅黑";
+	overflow-x: hidden;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+/* ---------------预加载------------ */
+#mask{
+	background: url(../img/loading_bg.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+#loading{
+	width: 58px;
+	height: 58px;
+	background: url(../img/loading.png) 0 0 no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+/* ----------------导航页--------------- */
+nav{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+nav ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+nav ul li{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+nav ul li img{
+	width: 100%;
+	height: 100%;
+}
+.bg_mask{
+	width: 200%;
+	position: absolute;
+	left: -100%;
+	top: 0;
+	transition: 1s;
+}
+.bg_mask li{
+	width: 12.5%;
+	background-color: black;
+	color: white;
+}
+
+.text{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.text li{
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.textBox{
+	position: relative;
+	top: 50%;
+}
+.textBox a{
+	color: white;
+}
+.textBox div{
+	width: 70px;
+	height: 5px;
+	background-color: #051596;
+	position: relative;
+	margin: 10px auto;
+}
+
+/* -----------------共用导航条---------- */
+#ulNav{
+	width: 100%;
+	min-width: 1024px;
+	height: 50px;
+	background-color: black;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	display: none;
+}
+#ulNav img{
+	position: relative;
+	left: 20px;
+	top: 5px;
+}
+#ulNav ul{
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	margin-right: 28%;
+}
+#ulNav ul li{
+	float: left;
+	margin-right: 50px;
+}
+#ulNav ul li:hover a{
+	color: white;
+}
+#ulNav ul li div{
+	width: 30px;
+	border-top: 5px solid #051596;
+	margin-bottom: 5px;
+	visibility: hidden;
+}
+#ulNav ul li a{
+	color:#3E3A39;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* ----------------about us--------------- */
+.ctnWrap{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	position: relative;
+}
+#aboutWrap{	
+	color: white;
+}
+.abBg{
+	width: 45%;
+}
+#abtUl{
+	width: 50%;
+	position: absolute;
+	right: 0;
+	bottom: 100px;
+}
+#abtUl li{
+	width: 88%;
+	margin-bottom: 10%; 
+}
+#abtUl li img{
+	width: 100%;
+}
+#abtUl li h6,#abtUl li p{
+	font-weight: lighter;
+	font-size: 13px;
+}
+#abtUl li h6{
+	margin-bottom: 10px;
+}
+
+/* ---------------work----------------- */
+
+#workWrap>p{
+	color: white;
+	font-size: 12px;
+	position: absolute;
+	left: 50px;
+	bottom: 8px;
+}	
+#workBg{
+	width: 45%;
+}
+#workNav{
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	padding-top: 5%; 
+}
+#workNav li{
+	width: 88%;
+	margin-bottom: 10px; 
+	overflow: hidden;
+}
+#workNav li:hover div{
+	display: block ! important;
+}
+#workNav li div{
+	display: none;
+}
+#workNav li a{
+	color: #3E3A39;
+	font-size: 12px;
+	float: left;
+	margin-left: 50px;
+}
+#workNav li span{
+	display: block;
+	width: 85px;
+	color: #051596;
+	font-size: 12px;
+	cursor: pointer;
+	float: left;
+	margin-right: 50px;
+}
+#workNav .first{
+	color: white;
+}
+
+/* 悬浮框 */
+.suspendBox{
+	width: 100%;
+	height: 48%;
+	position: absolute;
+	top: 49%;
+	left: 0;
+	background-color: white;
+	overflow: hidden;
+}
+.boxLeft{
+	width: 50%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	background-color: gray;
+	position: relative;
+}
+.boxLeftImg{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.boxLeftImg img{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.boxLeftImg img:nth-of-type(1){
+	display: block;
+}
+.boxLeftActive{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.boxLeftActive div{
+	cursor: pointer;
+	float: left;
+	margin: 20px 20px 20px 0; 
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;	
+	background-color: gray;
+}
+.boxLeftActive div:nth-of-type(1){
+	background-color: #00FF01;
+}
+.boxright{
+	float: right;
+	width: 50%;
+}
+.smallImgUl{
+	width: 80%;
+	overflow: hidden;
+	margin: 6%;
+}
+.smallImgUl li{
+	width: 15%;
+	float: left;
+	position: relative;
+}
+.smallImgUl li img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.smallImgUl li img:nth-of-type(2){
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.dateUl{
+	margin: 6%;
+	display: none;
+}
+.dateUl li{
+	margin-bottom: 10px;
+}
+video{
+	width: 100%;
+	height: 100%;
+}
+
+/*-------------TEAM-----------*/
+#teamWrap{
+	color: white;
+}
+#teamBg{
+	width: 68%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/* 头像 */
+#memberUl{
+	width: 32%;
+	height: auto;
+	position: absolute;
+	left: 18%;
+	top: 12%;
+	overflow: hidden;
+}
+#memberUl li{
+	float: left;
+	width: 33.33333%;
+	height: auto;
+	position: relative;
+	cursor: pointer;
+}
+#memberUl li img{
+	width: 100%;
+	display: block;
+}
+.memberMask{
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-color: black;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#memberUl li:hover .memberMask{
+	display: block;
+}
+#memberUl li:hover p{
+	display: block;
+}
+#memberUl li:hover span{
+	display: block;
+}
+#memberUl li p,#memberUl li span{
+	position: absolute;
+	display: none;
+}
+#memberUl li p{
+	left: -6%;
+	top: 0;
+	font-size: 12px;
+	-webkit-transform: scale(0.7);
+}
+#memberUl li span{
+	left: 1%;
+	bottom: 5%;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* 文字内容 */
+#joinUs{
+	width: 50%;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 2%;
+}
+#joinUs h2{
+	font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 5%;
+}
+#joinUs h3{
+    font-size: 14px;
+    margin-bottom: 2%;
+}
+#joinUs h4{
+    font-size: 12px;
+    margin-bottom: 1%;
+}
+#joinUs p{
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 1%;
+}
+#JUCon{
+	width: 88%;
+	height: 298px;
+	position: relative;
+	overflow: hidden;
+}
+#JUConT{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/* 滚动条 */
+#scroll{
+	height: 300px;
+	position: absolute;
+	top: 15%;
+	right: 12%;
+}
+#scrollBar{
+	width: 3px;
+	height: 50px;
+	background-color: #051596;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+#JUImgB{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/*-----------------contact---------------*/
+#contactWrap{
+	color: white;
+}
+#contactBg{
+	width: 80%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#map{
+	width: 25%;
+	position: absolute;
+	left: 20%;
+	top: 15%;
+}
+#map img{
+	width: 100%;
+}
+#contactUs{
+	width: 45%;
+	height: 400px;
+	position: absolute;
+	right: 5%;
+	bottom: 2%;
+}
+#contactUs h2{
+	font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 8%;
+}
+#contactUs>ul>li{
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 8%;
+    overflow: hidden;
+}
+#contactUs>ul>li div{
+	float: left;
+	margin-right: 25%; 
+}
+.contactLeft{
+	width: 50px;
+}
