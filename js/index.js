@@ -2,7 +2,7 @@
 
 	var imgs = $("#wrap img");
 	var $mask = $("#mask");
-	var $loading = $("#mask img");
+	var $loading = $("#mask>div");
 
 	var loadingH = 0;
 	// 用来表示已经加载了多少张图片
